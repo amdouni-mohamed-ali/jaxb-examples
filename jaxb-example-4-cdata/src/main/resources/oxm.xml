@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm">
+    <java-types>
+        <java-type name="com.jaxb.tutorial.examples.domain.Book">
+            <java-attributes>
+                <xml-element java-attribute="name" cdata="true"/>
+            </java-attributes>
+        </java-type>
+    </java-types>
+</xml-bindings>
