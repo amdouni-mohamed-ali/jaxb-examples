@@ -12,6 +12,7 @@
         <module>jaxb-example-namespace</module>
         <module>jaxb-example-2-toString</module>
         <module>jaxb-example-4-cdata</module>
+        <module>jaxb-maven-plugin</module>
     </modules>
     <packaging>pom</packaging>
 

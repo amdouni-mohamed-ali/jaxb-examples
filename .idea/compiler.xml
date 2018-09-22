@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="first-example" />
         <module name="jaxb-example-1" />
         <module name="jaxb-example-2-toString" />
         <module name="jaxb-example-4-cdata" />
@@ -13,11 +14,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="first-example" target="1.6" />
       <module name="jaxb-example-1" target="1.6" />
       <module name="jaxb-example-2-toString" target="1.6" />
       <module name="jaxb-example-4-cdata" target="1.6" />
       <module name="jaxb-example-namespace" target="1.6" />
       <module name="jaxb-examples" target="1.6" />
+      <module name="jaxb-maven-plugin" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
