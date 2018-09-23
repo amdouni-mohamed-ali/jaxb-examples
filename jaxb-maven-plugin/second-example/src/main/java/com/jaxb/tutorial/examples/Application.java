@@ -14,6 +14,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * check this for details : http://websystique.com/java/jaxb/jaxb-codegeneration-maven-example/
+ * execute : mvn clean install on command line before testing this class
+ */
 public class Application {
 
     public static void main(String... a) throws JAXBException, FileNotFoundException {
