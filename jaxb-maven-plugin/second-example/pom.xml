@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jaxb-maven-plugin</artifactId>
+        <groupId>com.jaxb.tutorial</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>second-example</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.7</version>
+        </dependency>
+
+        <!-- used to include equals, hashcode to the generated classes. look at the plugin configuration -->
+        <dependency>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>jaxb2-basics</artifactId>
+            <version>0.6.5</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <version>0.12.3</version>
+                <executions>
+                    <execution>
+                        <id>xsd_tutorial_jaxb</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <schemaDirectory>src/main/resources</schemaDirectory>
+                            <!-- schemaDirectory : Directory where XSD files can be found. In our case, the XSD are found in src/main/resources folder.-->
+                            <schemaIncludes>
+                                <!-- schemaIncludes : provides a way to specify which specific XSD will be consulted while code generation. -->
+                                <include>education.xsd</include>
+                            </schemaIncludes>
+                            <bindingDirectory>src/main/resources</bindingDirectory>
+                            <!-- bindingDirectory : Directory where binding files can be found. Binding files are used to provide binding between java type and XML types. In our case, the binding files(.xjb) are found in src/main/resources folder. -->
+                            <bindingIncludes>
+                                <!-- bindingIncludes : provides a way to specify which specific bidning files will be consulted while code generation. -->
+                                <include>education.xjb</include>
+                            </bindingIncludes>
+                            <generateDirectory>target/generated-sources/xjc</generateDirectory>
+                            <!-- generateDirectory : Directory where actual generated code will be placed. -->
+                            <generatePackage>com.jaxb.tutorial.examples.generated.classes</generatePackage>
+                            <!-- generatePackage : Actual package the generated code will be placed in. -->
+
+                            <!-- For including equals,hashcode and toString methods in generated code use this configuration -->
+                            <plugins>
+                                <plugin>
+                                    <groupId>org.jvnet.jaxb2_commons</groupId>
+                                    <artifactId>jaxb2-basics</artifactId>
+                                    <version>0.9.4</version>
+                                </plugin>
+                            </plugins>
+                            <args>
+                                <arg>-Xequals</arg>
+                                <arg>-XhashCode</arg>
+                                <arg>-XtoString</arg>
+                            </args>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -11,5 +11,7 @@ public class Application {
 
         We can provide a global bindings file. These binding declarations override the default binding rules.
         Like in this example we override the dateTime type to the java.util.Calendar type.
+
+        execute the mvn clean package command to generate classes
      */
 }
