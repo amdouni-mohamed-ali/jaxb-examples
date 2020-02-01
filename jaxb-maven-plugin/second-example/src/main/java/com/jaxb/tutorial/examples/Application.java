@@ -53,9 +53,7 @@ public class Application {
         University unif = (University) um.unmarshal(new FileReader("testFile.xml"));
         List<Student> studentsList = unif.getStudents().getStudent();
 
-        for (Student s : studentsList) {
-            System.out.println("Student : " + s);
-        }
+        studentsList.forEach(System.out::println);
     }
 
     private static List<Student> generatedStudents() {
