@@ -36,7 +36,7 @@
                         </configuration>
                     </execution>
 
-                    <!-- generate person.xsd classes -->
+                    <!-- generate shiporder.xsd classes -->
                     <execution>
                         <id>create-shiporder-classes</id>
                         <goals>

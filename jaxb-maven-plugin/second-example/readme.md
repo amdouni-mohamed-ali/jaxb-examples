@@ -11,6 +11,8 @@ As in one of our entities contains Date as a type jaxb will need more details ab
 we defined the `education.xjb` file which will tell jaxb where to find the converter. The converter is a java class that we've created to map the xml
 element to a java object and the java object to xml.
 
+We've used jaxb2-basics to add the toString and equals methods in the generated classes.
+
 ## Run the application
 
 You have just to package the project so you can trigger the jaxb plugin to generate classes :
