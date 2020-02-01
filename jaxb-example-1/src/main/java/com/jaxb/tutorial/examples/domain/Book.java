@@ -18,7 +18,8 @@ public class Book {
     private String author;
     private String publisher;
 
-    @XmlElement(name = "title")//to change the of the field name to title in the xml file
+    //to change the field name to title in the xml file
+    @XmlElement(name = "title")
     public String getName() {
         return name;
     }
