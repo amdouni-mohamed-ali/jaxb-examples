@@ -22,7 +22,7 @@ public class MyNamespaceMapper extends NamespacePrefixMapper {
 
     public MyNamespaceMapper() {
 
-        this.namespaceMap = new HashMap<String , String>();
+        this.namespaceMap = new HashMap<>();
         namespaceMap.put(LOCATION_URI , LOCATION_PREFIX);
         namespaceMap.put(XSI_URI , XSI_PREFIX);
         namespaceMap.put(OGM_URI , OGM_PREFIX);

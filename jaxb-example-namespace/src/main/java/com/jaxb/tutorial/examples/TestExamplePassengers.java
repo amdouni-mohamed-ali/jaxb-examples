@@ -2,6 +2,7 @@ package com.jaxb.tutorial.examples;
 
 import com.jaxb.tutorial.examples.domain.Passenger;
 import com.jaxb.tutorial.examples.domain.Passengers;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -19,7 +20,7 @@ public class TestExamplePassengers {
 
     public static void main(String[] args) throws JAXBException, XMLStreamException {
 
-        Set<Passenger> passengersList = new HashSet<Passenger>();
+        Set<Passenger> passengersList = new HashSet<>();
         Passenger passenger = new Passenger("Jean","Dupont");
         passengersList.add(passenger);
 
