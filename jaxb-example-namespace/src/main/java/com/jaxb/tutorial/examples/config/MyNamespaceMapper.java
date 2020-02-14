@@ -1,6 +1,6 @@
 package com.jaxb.tutorial.examples.config;
 
-import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
+import com.sun.xml.bind.marshaller.NamespacePrefixMapper;
 
 import java.util.HashMap;
 import java.util.Map;

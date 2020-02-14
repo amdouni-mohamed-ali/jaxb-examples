@@ -30,7 +30,7 @@ public class TestExample {
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
         //set prefix property
-        m.setProperty("com.sun.xml.internal.bind.namespacePrefixMapper", new MyNamespaceMapper());
+        m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new MyNamespaceMapper());
 
         // Write to System.out
         m.marshal(bookstore, System.out);
