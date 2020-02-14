@@ -18,37 +18,31 @@ public class Book {
     private String author;
     private String publisher;
 
-    public Book(String name, String author, String publisher) {
-        this.name = name;
-        this.author = author;
-        this.publisher = publisher;
-    }
-
-    public Book() {
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Book setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public Book setAuthor(String author) {
         this.author = author;
+        return this;
     }
 
     public String getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public Book setPublisher(String publisher) {
         this.publisher = publisher;
+        return this;
     }
 
     @Override

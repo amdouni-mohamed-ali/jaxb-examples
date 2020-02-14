@@ -2,6 +2,7 @@ package com.jaxb.tutorial.examples;
 
 import com.jaxb.tutorial.examples.domain.Book;
 import com.jaxb.tutorial.examples.domain.Bookstore;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -28,7 +29,7 @@ public class TestExample {
         Marshaller m = context.createMarshaller();
 
         //if you want to have a formatted xml string as output you can uncomment the below line
-//        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        //m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
         //redirect the output to a string object
         StringWriter stringWriter = new StringWriter();

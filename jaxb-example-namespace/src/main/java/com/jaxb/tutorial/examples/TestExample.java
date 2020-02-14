@@ -7,9 +7,6 @@ import com.jaxb.tutorial.examples.domain.Bookstore;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -17,7 +14,7 @@ public class TestExample {
 
     public static void main(String[] args) throws JAXBException, IOException {
 
-        ArrayList<Book> bookList = new ArrayList<Book>();
+        ArrayList<Book> bookList = new ArrayList<>();
         Book book1 = new Book("The Game","Neil Strauss","Harpercollins");
         bookList.add(book1);
 
@@ -33,7 +30,7 @@ public class TestExample {
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
         //set prefix property
-        m.setProperty("com.sun.xml.internal.bind.namespacePrefixMapper", new MyNamespaceMapper());
+        m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new MyNamespaceMapper());
 
         // Write to System.out
         m.marshal(bookstore, System.out);

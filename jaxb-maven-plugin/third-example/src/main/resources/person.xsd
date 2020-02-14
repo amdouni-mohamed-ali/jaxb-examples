@@ -1,0 +1,19 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+    <xsd:element name="person">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="phone" type="xsd:string" maxOccurs="3"/>
+                <xsd:element name="date_of_birth" type="xsd:date"/>
+                <xsd:element name="course" minOccurs="0" maxOccurs="3">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="course_name" type="xsd:string"/>
+                            <xsd:element name="course_code" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

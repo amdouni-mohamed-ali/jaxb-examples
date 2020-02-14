@@ -19,7 +19,7 @@ public class TestExample {
 
     public static void main(String[] args) throws JAXBException, IOException {
 
-        ArrayList<Book> bookList = new ArrayList<Book>();
+        ArrayList<Book> bookList = new ArrayList<>();
 
         // create books
         Book book1 = new Book();
